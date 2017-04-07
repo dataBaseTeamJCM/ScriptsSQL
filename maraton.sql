@@ -179,3 +179,4 @@
            ON UPDATE CASCADE
            ON DELETE CASCADE
    );
+   /* FALTA LOS NOT NULL Y CHECdasdasdsasK dasdsdasds            d sda  */
