@@ -6,7 +6,7 @@
 
     CREATE DOMAIN mtn.trinta_caracteres VARCHAR(30);/*MATERIA*/
     CREATE DOMAIN mtn.veinte_caracteres VARCHAR(20);/*CEDULA NO NULLLLLLLLLLL*/
-    CREATE DOMAIN mtn.treinta_caracteres VARCHAR (20);/*Nombre de Equipo NO NULLLLLLLLLLLLLLLLLLLLLL*/
+    CREATE DOMAIN mtn.treinta_caracteres VARCHAR (30);/*Nombre de Equipo NO NULLLLLLLLLLLLLLLLLLLLLL*/
     CREATE DOMAIN mtn.sesenta_caracteres VARCHAR (60);
     CREATE DOMAIN mtn.tipoprofesor VARCHAR(7)
         CHECK (VALUE IN ('Coach','Tecnico'));
