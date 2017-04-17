@@ -1,4 +1,6 @@
 INSERT INTO mtn.Integrante
+VALUES('243275454','Tchaikovsky Perez'),
+	  ('568921454','Stravinsky Sanchez'),
 	  ('879554574','Anna Mozart'),
 	  ('243333454','Donald Chamberlin'), 
 	  ('243275455','Edgar Frank Codd'), 
@@ -36,12 +38,19 @@ VALUES('243275454','Tchaikovsky Perez',2),
 	  ('343275459','Astronema Hernandez',4);
 
 INSERT INTO mtn.Es_un_Profesor
+VALUES('1','Maestro Yoda','Coach','Programacion','Decano'),
+	  ('33325488','Bill Gates','Coach','Algoritmos','Profesor'),
+	  ('87456214','Maestro Miyagi','Coach','Programacion','Profesor'),
+	  ('85858745','Gordom Ramsay','Coach','Cocina','Profesor'),
+	  ('25412568','Avril Lavigne','Coach','Programacion','Contratado');
 
 INSERT INTO mtn.Equipo
 VALUES('Los Rompe Codigos','Universidad de Carabobo'),
 	  ('La Faccion EseCuEle','Universidad de Carabobo'),
 	  ('La Legion Vtelca','Universidad de Carabobo'),
+	  ('El Escuadron Suicida','Universidad de Carabobo'),
 	  ('El Cartel de la Noche','Universidad de Carabobo');
+INSERT INTO mtn.Constituye
 VALUES('243275454','Los Rompe Codigos'),
 	  ('568921454','Los Rompe Codigos'),
 	  ('879554574','Los Rompe Codigos'),
