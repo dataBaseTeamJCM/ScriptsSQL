@@ -91,4 +91,9 @@ VALUES('243275454','Taller de C','08-04-2017','5'),
 	  ('221457545','Taller Saijan','09-09-2017','12'),
 	  ('227895465','Taller Python','02-07-2017','10'),
 	  ('343275459','Taller Python','02-07-2017','10');
+INSERT INTO mtn.Competencia
+VALUES('04-09-2017','El Maraton Legendario','Mundial','Canada'),
+	  ('05-06-2017','Programaton Pepon','Regional','Carabobo'),
+	  ('01-01-2018','Coders Tournament 7','Nacional','Venezuela'),
+	  ('01-01-2018','Trote de Programacion','Local','Universidad de Carabobo');
 
