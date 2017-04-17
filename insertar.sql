@@ -43,6 +43,7 @@ VALUES('1','Maestro Yoda','Coach','Programacion','Decano'),
 	  ('87456214','Maestro Miyagi','Coach','Programacion','Profesor'),
 	  ('85858745','Gordom Ramsay','Coach','Cocina','Profesor'),
 	  ('25412568','Avril Lavigne','Coach','Programacion','Contratado');
+	  /*Darth Vader, Steve Jobs, Bruce Lee,Kaiosama, Dr Strange*/
 
 INSERT INTO mtn.Equipo
 VALUES('Los Rompe Codigos','Universidad de Carabobo'),
@@ -71,3 +72,23 @@ VALUES('243275454','Los Rompe Codigos'),
 	  ('227895465','El Cartel de la Noche'),
 	  ('343275459','El Cartel de la Noche'),
 	  ('25412568','El Cartel de la Noche');
+INSERT INTO mtn.Actividad
+VALUES('Taller de C','El lado oscuro','08-04-2017'),
+	  ('Taller de C++','Central Apple','06-05-2017'),
+	  ('Taller Cool','China','05-06-2017'),
+	  ('Taller Saijan','Japon','09-09-2017'),
+	  ('Taller Python','Ragnarok','02-07-2017');
+INSERT INTO mtn.Viaja
+VALUES('243275454','Taller de C','08-04-2017','5'),
+	  ('568921454','Taller de C','08-04-2017','5'),
+	  ('879554574','Taller de C','08-04-2017','5'),
+	  ('243333454','Taller de C++','06-05-2017','3'),
+	  ('243275455','Taller de C++','06-05-2017','3'),
+	  ('243587454','Taller Cool','05-06-2017','6'),
+	  ('343275454','Taller Cool','05-06-2017','6'),
+	  ('563225454','Taller Cool','05-06-2017','6'),
+	  ('25475454','Taller Saijan','09-09-2017','12'),
+	  ('221457545','Taller Saijan','09-09-2017','12'),
+	  ('227895465','Taller Python','02-07-2017','10'),
+	  ('343275459','Taller Python','02-07-2017','10');
+
