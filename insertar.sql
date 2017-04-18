@@ -94,7 +94,7 @@ VALUES('243275454','Taller de C','08-04-2017','5'),
 INSERT INTO mtn.Competencia
 VALUES('04-09-2017','El Maraton Legendario','Mundial','Canada'),
 	  ('05-06-2017','Programaton Pepon','Regional','Carabobo'),
-	  ('01-01-2018','Coders Tournament 7','Nacional','Venezuela'),
+	  ('04-09-2017','Coders Tournament 7','Nacional','Venezuela'),
 	  ('01-01-2018','Trote de Programacion','Local','Universidad de Carabobo');
 INSERT INTO mtn.Participa
 VALUES('Los Rompe Codigos','El Maraton Legendario','04-09-2017','Beca + 1 Autografo de Yoda','Toronto','1','Alto'),
@@ -104,7 +104,7 @@ VALUES('Los Rompe Codigos','El Maraton Legendario','04-09-2017','Beca + 1 Autogr
 	  ('La Legion Vtelca','Programaton Pepon','05-06-2017','Autografo de Yoda','Carabobo','2','Medio'),
 	  ('Los Rompe Codigos','Programaton Pepon','05-06-2017','Una VIT nueva generación','Carabobo','1','Alto'),
 	  ('El Escuadron Suicida','Programaton Pepon','05-06-2017','Clases de Superación Personal','Carabobo','3','Medio'),
-	  ('Los Rompe Codigos','Coders Tournament 7','04-09-2017','Salario Minimo + jugo de durazno','Tucupita','2','Medio'),
+	  ('Los Rompe Codigos','Coders Tournament 7','04-09-2017','Salario Minimo ','Tucupita','2','Medio'),
 	  ('La Faccion EseCuEle','Coders Tournament 7','04-09-2017','Parrilla + Beca','Tucupita','1','Alto'),
 	  ('La Legion Vtelca','Coders Tournament 7','04-09-2017','Clases de Java + Beca','Tucupita','3','Medio'),
 	  ('El Cartel de la Noche','Coders Tournament 7','04-09-2017','Boletos para el Programaton','Tucupita','4','Bajo'),
