@@ -94,7 +94,7 @@ VALUES('243275454','Taller de C','08-04-2017','5'),
 INSERT INTO mtn.Competencia
 VALUES('04-09-2017','El Maraton Legendario','Mundial','Canada'),
 	  ('05-06-2017','Programaton Pepon','Regional','Carabobo'),
-	  ('04-09-2017','Coders Tournament 7','Nacional','Venezuela'),
+	  ('09-04-2017','Coders Tournament 7','Nacional','Venezuela'),
 	  ('01-01-2018','Trote de Programacion','Local','Universidad de Carabobo');
 INSERT INTO mtn.Participa
 VALUES('Los Rompe Codigos','El Maraton Legendario','04-09-2017','Beca + 1 Autografo de Yoda','Toronto','1','Alto'),
