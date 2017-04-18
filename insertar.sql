@@ -114,5 +114,8 @@ VALUES('Los Rompe Codigos','El Maraton Legendario','04-09-2017','Beca + 1 Autogr
 	  ('La Faccion EseCuEle','Trote de Programacion','01-01-2018','Beca + Bono Alimenticio','Mañonguito','1','Alto'),
 	  ('La Legion Vtelca','Trote de Programacion','01-01-2018','Pago de Transporte','Mañonguito','3','Medio'),
 	  ('El Cartel de la Noche','Trote de Programacion','01-01-2018','Beca + Bono Alimenticio','Mañonguito','4','Bajo');
-
-
+INSERT INTO mtn.Problema
+VALUES('Calculadora Magica','En una mesa estaban sentados 2 filosofos y 1 programador, sobre la mesa habia una manzana, una pera, y mil dolares, con los datos programe en C una calculadora capaz de calcular el valor de la paz mundial','Dificil'),
+	  ('Monos en el bosque','En un bosque habian muchos monos pero ninguno de estos tenia dinero para comprar un delicisioso kilo de bananas, excepto Michi el mono mas rico del bosque, quien decidio comprar el kilo y distribuirlo entre todos sus escla.. amigos, si el kilo que compro Michi trae 10 bananas, para no complicarse tanto en la distribucion Michi decidio quedarse con 9 bananas y dejo una para que fuese repartida entre los 200 monos que habitan en el bosque. Programe un codigo que calcule la cantidad equitativa de una banana entre 200 monitos.','Dificil'),
+	  ('El Rompe Corazones','A Maria le cae mal Fabiana y a Fabiana le cae mal Maria, pero ambas cumplen año el mismo día, Chip es muy buen amigo de ambas, y le prometio Maria que asistiría a su fiesta de cumpleaños, incluso luego de haberle prometido lo mismo a Fabiana, la fiesta de Maria es de 8pm a 2am y la fiesta de Fabiana es de 6pm a 4am. Simule con Semaforos una forma en la que Chip pueda pasar un tiempo en ambos cumpleaños.','Dificil'),
+	  ()
