@@ -34,7 +34,7 @@
     CREATE TABLE mtn.Integrante(
         ci       mtn.diez_caracteres        NOT NULL,  
         nombre   mtn.treinta_caracteres     NOT NULL,
-        direccion mtn.sesenta_caracteres,
+        direccion mtn.sesenta_caracteres, /*direcciones*/
         PRIMARY KEY(ci)
     );
 
@@ -158,7 +158,7 @@
         FOREIGN KEY (nombre_eq) REFERENCES mtn.Equipo(nombre_eq)
             ON UPDATE CASCADE
             ON DELETE CASCADE,
-        FOREIGN KEY (titulo) REFERENCES mtn.Problema(titulo)
+        FOREIGN KEY (titulo) REFERENCES mtn.Propone(titulo) /*Antes hacia referencia a Problema*/
             ON UPDATE CASCADE
             ON DELETE CASCADE
      );
