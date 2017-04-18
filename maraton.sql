@@ -34,6 +34,7 @@
     CREATE TABLE mtn.Integrante(
         ci       mtn.diez_caracteres        NOT NULL,  
         nombre   mtn.treinta_caracteres     NOT NULL,
+        direccion mtn.sesenta_caracteres,
         PRIMARY KEY(ci)
     );
 
