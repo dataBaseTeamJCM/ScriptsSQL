@@ -119,9 +119,25 @@ VALUES('Calculadora Magica','En una mesa estaban sentados 2 filosofos y 1 progra
 	  ('Monos en el bosque','En un bosque habian muchos monos pero ninguno de estos tenia dinero para comprar un delicisioso kilo de bananas, excepto Michi el mono mas rico del bosque, quien decidio comprar el kilo y distribuirlo entre todos sus escla.. amigos, si el kilo que compro Michi trae 10 bananas, para no complicarse tanto en la distribucion Michi decidio quedarse con 9 bananas y dejo una para que fuese repartida entre los 200 monos que habitan en el bosque. Programe un codigo que calcule la cantidad equitativa de una banana entre 200 monitos.','Dificil'),
 	  ('El Rompe Corazones','A Maria le cae mal Fabiana y a Fabiana le cae mal Maria, pero ambas cumplen año el mismo día, Chip es muy buen amigo de ambas, y le prometio Maria que asistiría a su fiesta de cumpleaños, incluso luego de haberle prometido lo mismo a Fabiana, la fiesta de Maria es de 8pm a 2am y la fiesta de Fabiana es de 6pm a 4am. Simule con Semaforos una forma en la que Chip pueda pasar un tiempo en ambos cumpleaños.','Dificil'),
 	  ('Loop Paralelo','Pretenda estar en un universo paralelo en donde los errores son soluciones a los problemas. Realice una funcion recursiva que no tenga fin.','Media'),
-	  ('Manzanas o Pizzas','Timmy tiene dos cajas una esta llena manzanas y la otra esta llena de mas cajas con pizzas recien horneadas, solo puede decidir abrir una caja y quedarse con todo el contenido, por alguna razon a Timmy no se le ocurre oler las cajas, asi que decide hacer un programa que antes de elegir decide hacer un programa que calcule la probabilidad de que las pizzas se encuentren en la caja derecha y no en la izquierda.','Baja'),
+	  ('Manzanas o Pizzas','Timmy tiene dos cajas una esta llena manzanas y la otra esta llena de mas cajas con pizzas recien horneadas, solo puede decidir abrir una caja y quedarse con todo el contenido, por alguna razon a Timmy no se le ocurre oler las cajas, asi que decide hacer un programa que antes de elegir decide hacer un programa que calcule la probabilidad de que las pizzas se encuentren en la caja derecha y no en la izquierda.','Facil'),
 	  ('Amor Artificial','A continuacion se le presenta el codigo fuente de la Inteligencia Artificial mas avanzada del mundo. Programe una funcion que simule dentro de la inteligencia aritificial, el amor por la humanidad, sin destruir al mundo','Dificil'),
 	  ('Pokemon Fan','Realice una base de datos en PostgreSQl (ignorando el hecho de que este lenguaje no esta permitido en la competencia) que contenga a todos los Pokemons existentes hasta la fecha con su tipo, evolucion, debilidades, fortalezas y generacion','Medio'),
 	  ('El Sol','Dada la temperatura actual, calcule la temperatura del Sol','Facil'),
 	  ('¿Wally donde estas?','Realice un programa que encuentre a Wally en cada una de las fotografias del libro ¿Donde esta Wally?','Medio'),
-	  
+	  ('Compañia De Lamparas','Una compañía fabrica y venden dos modelos de lámpara L1 y L2. Para su fabricación se necesita un trabajo manual de 20 minutos para el modelo L1 y de 30 minutos para el L2; y un trabajo de máquina para L1 y de 10 minutos para L2. Se dispone para el trabajo manual de 100 horas al mes y para la máquina 80 horas al mes. Sabiendo que el beneficio por unidad es de 15 y 10 euros para L1 y L2, respectivamente, planificar la producción para obtener el máximo beneficio.','Dificil'),
+	  ('La Granja De Pollos','En una granja de pollos se da una dieta, para engordar, con una composición mínima de 15 unidades de una sustancia A y otras 15 de una sustancia B. En el mercado sólo se encuentra dos clases de compuestos: el tipo X con una composición de una unidad de A y 5 de B, y el otro tipo, Y, con una composición de cinco unidades de A y una de B. El precio del tipo X es de 10 euros y del tipo Y es de 30 €. ¿Qué cantidades se han de comprar de cada tipo para cubrir las necesidades con un coste mínimo?','Medio'),
+	  ('El Almacen','Unos grandes almacenes desean liquidar 200 camisas y 100 pantalones de la temporada anterior. Para ello lanzan, dos ofertas, A y B. La oferta A consiste en un lote de una camisa y un pantalón, que se venden a 30 €; la oferta B consiste en un lote de tres camisas y un pantalón, que se vende a 50 €. No se desea ofrecer menos de 20 lotes de la oferta A ni menos de 10 de la B. ¿Cuántos lotes ha de vender de cada tipo para maximizar la ganancia?','Dificil');
+
+INSERT INTO mtn.Propone
+VALUES('04-09-2017','El Maraton Legendario','Calculadora Magica'),
+	  ('04-09-2017','El Maraton Legendario','Loop Paralelo'),
+	  ('04-09-2017','El Maraton Legendario','Amor Artificial'),
+	  ('05-06-2017','Programaton Pepon','Monos en el bosque'),
+	  ('05-06-2017','Programaton Pepon','El Rompe Corazones'),
+	  ('05-06-2017','Programaton Pepon','Manzanas o Pizzas'),
+	  ('09-04-2017','Coders Tournament 7','¿Wally donde estas?'),
+	  ('09-04-2017','Coders Tournament 7','El Sol'),
+	  ('09-04-2017','Coders Tournament 7','Pokemon Fan'),
+	  ('01-01-2018','Trote de Programacion','Compañia De Lamparas'),
+	  ('01-01-2018','Trote de Programacion','La Granja De Pollos'),
+	  ('01-01-2018','Trote de Programacion','El Almacen');
