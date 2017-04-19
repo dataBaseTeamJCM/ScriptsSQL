@@ -32,10 +32,6 @@ FROM    (SELECT RANK() OVER( ORDER BY CUENTA DESC) AS RANKING,
         )FINAL2
 WHERE RANKING = 1;
 
-
-/*2. Clasifique por competencia los problemas resueltos por más
-equipos y diga los nombres de los integrantes.*/
-
 /*3. Qué profesor ha entrenado a equipos para el maratón de
 programación y ha participado,en el pasado cuando era
 estudiante, en alguna de las competencias.*/
