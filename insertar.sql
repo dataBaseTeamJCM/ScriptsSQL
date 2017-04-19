@@ -53,7 +53,8 @@ VALUES('243275454','Tchaikovsky Perez','Urb Los Mangos'),  /*estudiantes*/
 	  ('25412568','Avril Lavigne','Urb Los Mangos');				
 
 INSERT INTO mtn.Es_un_Estudiante
-VALUES('243275454','Tchaikovsky Perez',2),
+VALUES('21484395','Gabriel Garcia',5),
+	  ('243275454','Tchaikovsky Perez',2),
 	  ('568921454','Stravinsky Sanchez',2),
 	  ('879554574','Anna Mozart',3),
 	  ('243333454','Donald Chamberlin',1),
@@ -106,7 +107,7 @@ VALUES('21484395','Gabriel Garcia','Tecnico','Algoritmos',null, 'Diseño de estr
 	  ('33325488','Bill Gates','Coach','Programcion','Dueño De la uc', null,'0426-4306317'),
 	  ('87456214','Maestro Miyagi','Coach','Algoritmos','Vice-Director', null,'0426-4306318'),
 	  ('85858745','Gordom Ramsay','Coach','Algoritmos','Jefe de Catedra', null,'0426-4306319'),
-	  ('25412568','Avril Lavigne','Coach','Algoritmos','Presidente', null,'0426-4306320');
+	  ('25412568','Avril Lavigne','Tecnico','Algoritmos',null, 'analista','0426-4306320');
 	  /*Darth Vader, Steve Jobs, Bruce Lee,Kaiosama, Dr Strange*/
 
 INSERT INTO mtn.Equipo
@@ -169,9 +170,9 @@ VALUES('21484412','Los Rompe Codigos',2018),
 	  ('21484404','Los Caimanes',2018),
 	  ('85858745','Los Caimanes',2018),
 	  ('243275454','Los Rompe Codigos',2017),
-	  ('568921454','Los Rompe Codigos',2017),
+	  ('21484395','Los Rompe Codigos',2017),
 	  ('879554574','Los Rompe Codigos',2017),
-	  ('21484395', 'Los Rompe Codigos',2017),
+	  ('25412568', 'Los Rompe Codigos',2017),
 	  ('21484405','Los Rompe Codigos',2017),
 	  ('243333454','El Cartel de la Noche',2017),
 	  ('243275455','El Cartel de la Noche',2017),
