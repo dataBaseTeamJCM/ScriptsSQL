@@ -63,7 +63,7 @@ VALUES('221457545','Los Rompe Codigos'),
 	  ('243587454','La Legion Vtelca'),
 	  ('343275454','La Legion Vtelca'),
 	  ('563225454','La Legion Vtelca'),
-	  ('87456214','La Legion Vtelca'),
+	  ('879554574','La Legion Vtelca'),
 	  ('221457545','El Escuadron Suicida'),
 	  ('698275454','El Escuadron Suicida'),
 	  ('235478965','El Escuadron Suicida'),
@@ -71,7 +71,7 @@ VALUES('221457545','Los Rompe Codigos'),
 	  ('221457545','El Cartel de la Noche'),
 	  ('227895465','El Cartel de la Noche'),
 	  ('343275459','El Cartel de la Noche'),
-	  ('25412568','El Cartel de la Noche');
+	  ('879554574','El Cartel de la Noche');
 INSERT INTO mtn.Actividad
 VALUES('Taller de C','El lado oscuro','08-04-2017'),
 	  ('Taller de C++','Central Apple','06-05-2017'),
