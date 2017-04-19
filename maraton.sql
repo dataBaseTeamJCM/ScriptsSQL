@@ -28,13 +28,15 @@
     CREATE DOMAIN mtn.dificultad            VARCHAR(7)
         CHECK(VALUE IN('Facil', 'Medio', 'Dificil'));
     CREATE DOMAIN mtn.lenguaje_p            VARCHAR(6)
-        CHECK(VALUE IN('C/C++', 'Java', 'Python', 'Pascal'));    
+        CHECK(VALUE IN('C/C++', 'Java', 'Python', 'Pascal'));
+    CREATE DOMAIN mtn.año_eq                   INT           /*AÑO DE CONSTITUCION DEL EQUIPO*/
+        CHECK (VALUE >= 1900);    
     
     /*Tablas de la base de datos*/
     CREATE TABLE mtn.Integrante(
         ci       mtn.diez_caracteres        NOT NULL,  
         nombre   mtn.treinta_caracteres     NOT NULL,
-        direccion mtn.sesenta_caracteres,
+        direccion mtn.sesenta_caracteres,               /*AGG A LA FASE 1 Y 2*/
         PRIMARY KEY(ci)
     );
 
@@ -94,16 +96,18 @@
      CREATE TABLE mtn.Equipo(
         nombre_eq       mtn.treinta_caracteres NOT NULL,
         universidad     mtn.treinta_caracteres NOT NULL,
-        PRIMARY KEY(nombre_eq)
+        año             mtn.año_eq             NOT NULL, /*agg a fase 1 y fase 2*/
+        PRIMARY KEY(nombre_eq, año)
      );
      CREATE TABLE mtn.Constituye(
         ci              mtn.diez_caracteres     NOT NULL,
-        nombre_eq       mtn.treinta_caracteres  NOT NULL, 
-        PRIMARY KEY(ci, nombre_eq),
+        nombre_eq       mtn.treinta_caracteres  NOT NULL,
+        año             mtn.año_eq              NOT NULL, /*agg a fase 1 y fase 2*/
+        PRIMARY KEY(ci, nombre_eq, año),
         FOREIGN KEY(ci) REFERENCES mtn.Integrante (ci)
         ON UPDATE CASCADE
         ON DELETE CASCADE,
-        FOREIGN KEY (nombre_eq) REFERENCES mtn.Equipo(nombre_eq)
+        FOREIGN KEY (nombre_eq, año) REFERENCES mtn.Equipo(nombre_eq, año)
         ON UPDATE CASCADE
         ON DELETE CASCADE
      );
@@ -117,14 +121,15 @@
      );
     CREATE TABLE mtn.Participa(
         nombre_eq       mtn.treinta_caracteres  NOT NULL,
+        año_equipo      mtn.año_eq              NOT NULL, /*agg a fase 1 y fase 2*/    
         nombre_comp     mtn.treinta_caracteres  NOT NULL,
         fecha           mtn.fecha               NOT NULL,
         incentivo       mtn.treinta_caracteres  NOT NULL,
         site            mtn.quince_caracteres   NOT NULL,
         ranking         mtn.ranking_eq          NOT NULL,
         rendimiento     mtn.rend_eq             NOT NULL,
-        PRIMARY KEY(nombre_eq, nombre_comp, fecha),
-        FOREIGN KEY(nombre_eq) REFERENCES mtn.Equipo(nombre_eq)
+        PRIMARY KEY(nombre_eq, año_equipo, nombre_comp, fecha),
+        FOREIGN KEY(nombre_eq, año_equipo) REFERENCES mtn.Equipo(nombre_eq, año)
             ON UPDATE CASCADE
             ON DELETE CASCADE,
         FOREIGN KEY(nombre_comp, fecha) REFERENCES mtn.Competencia(nombre_comp, fecha)
@@ -151,11 +156,12 @@
     );
      CREATE TABLE mtn.Resuelve(
         nombre_eq   mtn.treinta_caracteres       NOT NULL,
+        año_equipo  mtn.año_eq                   NOT NULL, /*agg a fase 1 y fase 2*/
         titulo      mtn.treinta_caracteres       NOT NULL,
         tiempo      mtn.diez_caracteres          NOT NULL,
         lenguaje    mtn.lenguaje_p               NOT NULL,
-        PRIMARY KEY (nombre_eq,titulo),
-        FOREIGN KEY (nombre_eq) REFERENCES mtn.Equipo(nombre_eq)
+        PRIMARY KEY (nombre_eq, año_equipo,titulo),
+        FOREIGN KEY (nombre_eq, año_equipo) REFERENCES mtn.Equipo(nombre_eq, año)
             ON UPDATE CASCADE
             ON DELETE CASCADE,
         FOREIGN KEY (titulo) REFERENCES mtn.Problema(titulo)
