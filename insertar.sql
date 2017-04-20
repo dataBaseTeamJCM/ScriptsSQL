@@ -225,6 +225,7 @@ VALUES('Taller de C','El lado oscuro','08-04-2017'),
 	  ('Taller Cool','China','05-06-2017'),
 	  ('Taller Saijan','Japon','09-09-2017'),
 	  ('Taller Python','Ragnarok','02-07-2017');
+
 INSERT INTO mtn.Viaja
 VALUES('243275454','Taller de C','08-04-2017',5),
 	  ('568921454','Taller de C','08-04-2017',5),
@@ -254,6 +255,98 @@ VALUES('243275454','Taller de C','08-04-2017',5),
 	  ('21484393','Taller Python','02-07-2017',10),
 	  ('21484394','Taller Python','02-07-2017',10),
 	  ('21484412','Taller de C','08-04-2017',5);
+INSERT INTO mtn.Tipo_clases
+VALUES('21484395','243275454','Taller de C'),
+	  ('21484395','568921454','Taller de C'),
+	  ('21484395','879554574','Taller de C'),
+	  ('21484396','243333454','Taller de C++'),
+	  ('21484396','243275455','Taller de C++'),
+	  ('21484397','243587454','Taller Cool'),
+	  ('21484397','343275454','Taller Cool'),
+	  ('21484397','563225454','Taller Cool'),
+	  ('21484398','25475454','Taller Saijan'),
+	  ('21484398','221457545','Taller Saijan'),
+	  ('21484399','227895465','Taller Python'),
+	  ('21484399','343275459','Taller Python'),
+	  ('21484399','21484380','Taller Python'),
+	  ('21484398','21484381','Taller Saijan'),
+	  ('21484397','21484382','Taller Cool'),
+	  ('21484396','21484383','Taller de C++'),
+	  ('21484397','21484384','Taller Cool'),
+	  ('21484395','21484385','Taller de C'),
+	  ('21484399','21484386','Taller Python'),
+	  ('21484396','21484387','Taller de C++'),
+	  ('21484397','21484388','Taller Cool'),
+	  ('21484395','21484389','Taller de C'),
+	  ('21484399','21484390','Taller Python'),
+	  ('21484399','21484391','Taller Python'),
+	  ('21484397','21484392','Taller Cool'),
+	  ('21484399','21484393','Taller Python'),
+	  ('21484399','21484394','Taller Python'),
+	  ('21484395','21484412','Taller de C');
+INSERT INTO mtn.Tipo_hospedaje
+VALUES('243275454','Taller de C','Hotel las Sardinas','08-04-2017'),
+	  ('568921454','Taller de C','Hotel las Sardinas','08-04-2017'),
+	  ('879554574','Taller de C','Hotel las Sardinas','08-04-2017'),
+	  ('243333454','Taller de C++','Hotel Trivago','06-05-2017'),
+	  ('243275455','Taller de C++','Hotel Trivago','06-05-2017'),
+	  ('243587454','Taller Cool','El templo de Jackie','05-06-2017'),
+	  ('343275454','Taller Cool','El templo de Jackie','05-06-2017'),
+	  ('563225454','Taller Cool','El templo de Jackie','05-06-2017'),
+	  ('25475454','Taller Saijan','Kame House','09-09-2017'),
+	  ('221457545','Taller Saijan','Kame House','09-09-2017'),
+	  ('227895465','Taller Python','Casa de Thor','02-07-2017'),
+	  ('343275459','Taller Python','Casa de Thor','02-07-2017'),
+	  ('21484380','Taller Python','Casa de Thor','02-07-2017'),
+	  ('21484381','Taller Saijan','Kame House','09-09-2017'),
+	  ('21484382','Taller Cool','El templo de Jackie','05-06-2017'),
+	  ('21484383','Taller de C++','Hotel Trivago','06-05-2017'),
+	  ('21484384','Taller Cool','El templo de Jackie','05-06-2017'),
+	  ('21484385','Taller de C','Hotel las Sardinas','08-04-2017')
+	  ('21484386','Taller Python','Casa de Thor','02-07-2017'),
+	  ('21484387','Taller de C++','Hotel Trivago','06-05-2017'),
+	  ('21484388','Taller Cool','El templo de Jackie','05-06-2017'),
+	  ('21484389','Taller de C','Hotel las Sardinas','08-04-2017'),
+	  ('21484390','Taller Python','Casa de Thor','02-07-2017'),
+	  ('21484391','Taller Python','Casa de Thor','02-07-2017'),
+	  ('21484392','Taller Cool','El templo de Jackie','05-06-2017'),
+	  ('21484393','Taller Python','Casa de Thor','02-07-2017'),
+	  ('21484394','Taller Python','Casa de Thor','02-07-2017'),
+	  ('21484412','Taller de C','Hotel las Sardinas','08-04-2017');
+INSERT INTO mtn.Tipo_financista
+VALUES('243275454','Taller de C','Pepsi','08-04-2017'),
+	  ('568921454','Taller de C','Pepsi','08-04-2017'),
+	  ('879554574','Taller de C','Pepsi','08-04-2017'),
+	  ('243333454','Taller de C++','Razer','06-05-2017'),
+	  ('243275455','Taller de C++','Razer','06-05-2017'),
+	  ('243587454','Taller Cool','Raid','05-06-2017'),
+	  ('343275454','Taller Cool','Raid','05-06-2017'),
+	  ('563225454','Taller Cool','Raid','05-06-2017'),
+	  ('25475454','Taller Saijan','Apple','09-09-2017'),
+	  ('221457545','Taller Saijan','Apple','09-09-2017'),
+	  ('227895465','Taller Python','Los Barbaricos 6 y su burro','02-07-2017'),
+	  ('343275459','Taller Python','Los Barbaricos 6 y su burro','02-07-2017'),
+	  ('21484380','Taller Python','Los Barbaricos 6 y su burro','02-07-2017'),
+	  ('21484381','Taller Saijan','Logitech','09-09-2017'),
+	  ('21484382','Taller Cool','IBM,','05-06-2017'),
+	  ('21484383','Taller de C++','Coca Cola','06-05-2017'),
+	  ('21484384','Taller Cool','Logitech','05-06-2017'),
+	  ('21484385','Taller de C','Coca Cola','08-04-2017')
+	  ('21484386','Taller Python','Marvel','02-07-2017'),
+	  ('21484387','Taller de C++','Marvel','06-05-2017'),
+	  ('21484388','Taller Cool','Logitech','05-06-2017'),
+	  ('21484389','Taller de C','JUMP','08-04-2017'),
+	  ('21484390','Taller Python','Vick','02-07-2017'),
+	  ('21484391','Taller Python','Vick','02-07-2017'),
+	  ('21484392','Taller Cool','Steelseries','05-06-2017'),
+	  ('21484393','Taller Python','CASIO','02-07-2017'),
+	  ('21484394','Taller Python','CASIO','02-07-2017'),
+	  ('21484412','Taller de C','ASUS','08-04-2017');
+INSERT INTO mtn.Tipo_incidente
+VALUES('563225454','Taller Cool','Zoraya Montenegro empujo a la lisiada por las escaleras','08-04-2017');
+
+	  
+
 INSERT INTO mtn.Competencia
 VALUES('04-09-2017','El Maraton Legendario','Mundial','Canada'),
 	  ('05-06-2017','Programaton Pepon','Regional','Carabobo'),
@@ -341,4 +434,5 @@ VALUES('Los Rompe Codigos',2017,'Calculadora Magica','5','C/C++'),
 	  ('Los Monos',2018,'El Almacen','15','C/C++'),
 	  ('El Cartel de la Noche',2017,'¿Wally donde estas?','15','Python'),
 	  ('Los Vagos',2018,'El Almacen','50','Java');
-	  
+	
+
