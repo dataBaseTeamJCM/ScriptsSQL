@@ -302,7 +302,7 @@ VALUES('243275454','Taller de C','Hotel las Sardinas','08-04-2017'),
 	  ('21484382','Taller Cool','El templo de Jackie','05-06-2017'),
 	  ('21484383','Taller de C++','Hotel Trivago','06-05-2017'),
 	  ('21484384','Taller Cool','El templo de Jackie','05-06-2017'),
-	  ('21484385','Taller de C','Hotel las Sardinas','08-04-2017')
+	  ('21484385','Taller de C','Hotel las Sardinas','08-04-2017'),
 	  ('21484386','Taller Python','Casa de Thor','02-07-2017'),
 	  ('21484387','Taller de C++','Hotel Trivago','06-05-2017'),
 	  ('21484388','Taller Cool','El templo de Jackie','05-06-2017'),
@@ -331,7 +331,7 @@ VALUES('243275454','Taller de C','Pepsi','08-04-2017'),
 	  ('21484382','Taller Cool','IBM,','05-06-2017'),
 	  ('21484383','Taller de C++','Coca Cola','06-05-2017'),
 	  ('21484384','Taller Cool','Logitech','05-06-2017'),
-	  ('21484385','Taller de C','Coca Cola','08-04-2017')
+	  ('21484385','Taller de C','Coca Cola','08-04-2017'),
 	  ('21484386','Taller Python','Marvel','02-07-2017'),
 	  ('21484387','Taller de C++','Marvel','06-05-2017'),
 	  ('21484388','Taller Cool','Logitech','05-06-2017'),
@@ -343,7 +343,7 @@ VALUES('243275454','Taller de C','Pepsi','08-04-2017'),
 	  ('21484394','Taller Python','CASIO','02-07-2017'),
 	  ('21484412','Taller de C','ASUS','08-04-2017');
 INSERT INTO mtn.Tipo_incidente
-VALUES('563225454','Taller Cool','Zoraya Montenegro empujo a la lisiada por las escaleras','08-04-2017');
+VALUES('563225454','Taller Cool','Zoraya Montenegro empujo a la lisiada por las escaleras','05-06-2017');
 
 	  
 
