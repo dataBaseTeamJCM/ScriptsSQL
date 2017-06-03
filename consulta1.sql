@@ -32,6 +32,3 @@ FROM    (SELECT RANK() OVER( ORDER BY CUENTA DESC) AS RANKING,
         )FINAL2
 WHERE RANKING = 1;
 
-/*3. Qué profesor ha entrenado a equipos para el maratón de
-programación y ha participado,en el pasado cuando era
-estudiante, en alguna de las competencias.*/
