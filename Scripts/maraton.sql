@@ -22,16 +22,14 @@
     CREATE DOMAIN MTN.CANT_DIAS             NUMERIC;
     CREATE DOMAIN MTN.NIVEL_COMP            VARCHAR(8)
         CHECK(VALUE IN('Local', 'Regional','Nacional', 'Mundial' ));
-    CREATE DOMAIN MTN.RANKING_EQ            INT
-        CHECK(VALUE >= 1);
     CREATE DOMAIN MTN.REND_EQ               VARCHAR(5)
         CHECK(VALUE IN('Bajo', 'Medio', 'Alto'));    
-    CREATE DOMAIN MTN.DIFICULTAD            VARCHAR(7)
+    CREATE DOMAIN MTN.DIFICULTAD_P          VARCHAR(7)
         CHECK(VALUE IN('Facil', 'Medio', 'Dificil'));
     CREATE DOMAIN MTN.LENGUAJE_P            VARCHAR(6)
         CHECK(VALUE IN('C/C++', 'Java', 'Python', 'Pascal'));
     CREATE DOMAIN MTN.AÑO_EQ                INT           /*AÑO DE CONSTITUCION DEL EQUIPO*/
-        CHECK (VALUE >= 1900);    
+        CHECK (VALUE >= 1900);        
     
     /*Tablas de la base de datos*/
     CREATE TABLE MTN.ESTUDIANTE(
@@ -125,112 +123,113 @@
             ON DELETE CASCADE
     );
 
-     CREATE TABLE MTN.COMPETENCIA(
-         ID_COMPETENCIA        MTN.DIEZ_CARACTERES    NOT NULL,
-         NOMBRE_COMPETENCIA    MTN.TREINTA_CARACTERES NOT NULL,
-         NIVEL                 MTN.NIVEL_COMP         NOT NULL,          
-         LUGAR_COMPETENCIA     MTN.TREINTA_CARACTERES NOT NULL,
-         FECHA_COMPETENCIA     MTN.TREINTA_CARACTERES NOT NULL,
-         PRIMARY KEY (ID_ACTIVIDAD)
-     );
-    CREATE TABLE mtn.Participa(
-        nombre_eq       mtn.treinta_caracteres  NOT NULL,
-        año_equipo      mtn.año_eq              NOT NULL, /*agg a fase 1 y fase 2*/    
-        nombre_comp     mtn.treinta_caracteres  NOT NULL,
-        fecha           mtn.fecha               NOT NULL,
-        incentivo       mtn.treinta_caracteres  NOT NULL,
-        site            mtn.quince_caracteres   NOT NULL,
-        ranking         mtn.ranking_eq          NOT NULL,
-        rendimiento     mtn.rend_eq             NOT NULL,
-        PRIMARY KEY(nombre_eq, año_equipo, nombre_comp, fecha),
-        FOREIGN KEY(nombre_eq, año_equipo) REFERENCES mtn.Equipo(nombre_eq, año)
+    CREATE TABLE MTN.COMPETENCIA(
+        ID_COMPETENCIA        MTN.DIEZ_CARACTERES    NOT NULL,
+        NOMBRE_COMPETENCIA    MTN.TREINTA_CARACTERES NOT NULL,
+        NIVEL                 MTN.NIVEL_COMP         NOT NULL,          
+        LUGAR_COMPETENCIA     MTN.TREINTA_CARACTERES NOT NULL,
+        FECHA_COMPETENCIA     MTN.TREINTA_CARACTERES NOT NULL,
+        PRIMARY KEY (ID_COMPETENCIA)
+    );
+
+    CREATE TABLE MTN.PARTICIPA(
+        ID_EQUIPO       MTN.DIEZ_CARACTERES     NOT NULL,
+        ID_COMPETENCIA  MTN.DIEZ_CARACTERES     NOT NULL,   
+        INCENTIVO       MTN.TREINTA_CARACTERES  NOT NULL,
+        SITE            MTN.QUINCE_CARACTERES   NOT NULL,
+        RENDIMIENTO     MTN.REND_EQ             NOT NULL,
+        PRIMARY KEY (ID_EQUIPO, ID_COMPETENCIA),
+        FOREIGN KEY (ID_EQUIPO)      REFERENCES  MTN.EQUIPO         (ID_EQUIPO)
             ON UPDATE CASCADE
             ON DELETE CASCADE,
-        FOREIGN KEY(nombre_comp, fecha) REFERENCES mtn.Competencia(nombre_comp, fecha)
+        FOREIGN KEY (ID_COMPETENCIA) REFERENCES  MTN.COMPETENCIA    (ID_COMPETENCIA)
             ON UPDATE CASCADE
             ON DELETE CASCADE
     );
-     CREATE TABLE mtn.Problema (
-        titulo          mtn.treinta_caracteres  NOT NULL,
-        enunciado       mtn.mil_caracteres      NOT NULL,
-        dificultad_p    mtn.dificultad          NOT NULL,
-        PRIMARY KEY (titulo)
-     );
-     CREATE TABLE mtn.Propone(
-        fecha           mtn.fecha               NOT NULL,
-        nombre_comp     mtn.treinta_caracteres  NOT NULL,
-        titulo          mtn.treinta_caracteres  NOT NULL,
-        PRIMARY KEY (fecha,nombre_comp, titulo),
-        FOREIGN KEY (fecha,nombre_comp) REFERENCES mtn.Competencia(fecha, nombre_comp)
+    
+    CREATE TABLE MTN.PROBLEMA(
+        ID_PROBLEMA  MTN.DIEZ_CARACTERES    NOT NULL,
+        TITULO       MTN.TREINTA_CARACTERES NOT NULL,
+        DIFICULTAD   MTN.DIFICULTAD_P       NOT NULL,
+        ENUNCIADO    MTN.MIL_CARACTERES     NOT NULL,
+        PRIMARY KEY (ID_PROBLEMA)
+    );
+
+    CREATE TABLE MTN.PROPONE(
+        ID_COMPETENCIA  MTN.DIEZ_CARACTERES     NOT NULL,
+        ID_PROBLEMA     MTN.DIEZ_CARACTERES     NOT NULL,
+        PRIMARY KEY (ID_COMPETENCIA, ID_PROBLEMA),
+        FOREIGN KEY (ID_COMPETENCIA)    REFERENCES  MTN.COMPETENCIA (ID_COMPETENCIA)
             ON UPDATE CASCADE
             ON DELETE CASCADE,
-        FOREIGN KEY (titulo) REFERENCES mtn.Problema(titulo)
+        FOREIGN KEY (ID_PROBLEMA)       REFERENCES  MTN.PROBLEMA    (ID_PROBLEMA)
             ON UPDATE CASCADE
             ON DELETE CASCADE
     );
-     CREATE TABLE mtn.Resuelve(
-        nombre_eq   mtn.treinta_caracteres       NOT NULL,
-        año_equipo  mtn.año_eq                   NOT NULL, /*agg a fase 1 y fase 2*/
-        titulo      mtn.treinta_caracteres       NOT NULL,
-        tiempo      mtn.diez_caracteres          NOT NULL,
-        lenguaje    mtn.lenguaje_p               NOT NULL,
-        PRIMARY KEY (nombre_eq, año_equipo,titulo),
-        FOREIGN KEY (nombre_eq, año_equipo) REFERENCES mtn.Equipo(nombre_eq, año)
+
+    CREATE TABLE MTN.RESUELVE(
+        ID_EQUIPO    MTN.DIEZ_CARACTERES          NOT NULL,
+        ID_PROBLEMA  MTN.DIEZ_CARACTERES          NOT NULL, 
+        LENGUAJE     MTN.LENGUAJE_P               NOT NULL,
+        TIEMPO       MTN.DIEZ_CARACTERES          NOT NULL,
+        PRIMARY KEY (ID_EQUIPO, ID_PROBLEMA),
+        FOREIGN KEY (ID_EQUIPO)     REFERENCES  MTN.EQUIPO      (ID_EQUIPO)
             ON UPDATE CASCADE
             ON DELETE CASCADE,
-        FOREIGN KEY (titulo) REFERENCES mtn.Problema(titulo)
+        FOREIGN KEY (ID_PROBLEMA)   REFERENCES  MTN.PROBLEMA    (ID_PROBLEMA)
             ON UPDATE CASCADE
             ON DELETE CASCADE
-     );
-     CREATE TABLE mtn.Tipo_clases(
-        ci_p    mtn.diez_caracteres         NOT NULL,
-        ci_e    mtn.diez_caracteres         NOT NULL,
-        clases  mtn.treinta_caracteres      NOT NULL,
-        PRIMARY KEY(ci_p,ci_e,clases),
-        FOREIGN KEY(ci_p) REFERENCES mtn.Es_un_Profesor(ci_p)
+    );
+
+    CREATE TABLE mtn.TIPO_CLASES(
+        CLASES         MTN.TREINTA_CARACTERES      NOT NULL,
+        CI_PROFESOR    MTN.DIEZ_CARACTERES         NOT NULL,
+        CI_ESTUDIANTE  MTN.DIEZ_CARACTERES         NOT NULL,
+        PRIMARY KEY (CLASES, CI_PROFESOR, CI_ESTUDIANTE),
+        FOREIGN KEY (CI_PROFESOR)    REFERENCES  MTN.PROFESOR    (CI_PROFESOR)
             ON UPDATE CASCADE
             ON DELETE CASCADE,
-        FOREIGN KEY(ci_e) REFERENCES mtn.Es_un_Estudiante(ci_e)
+        FOREIGN KEY (CI_ESTUDIANTE)  REFERENCES  MTN.ESTUDIANTE  (CI_ESTUDIANTE)
             ON UPDATE CASCADE
             ON DELETE CASCADE
-     );
-     CREATE TABLE mtn.Tipo_hospedaje(
-            ci_e        mtn.diez_caracteres      NOT NULL,
-            nombre_act  mtn.treinta_caracteres   NOT NULL,
-            hospedaje   mtn.treinta_caracteres   NOT NULL,
-            fecha       mtn.fecha                NOT NULL,
-            PRIMARY KEY(ci_e,nombre_act,hospedaje,fecha),
-            FOREIGN KEY (ci_e) REFERENCES mtn.Es_un_Estudiante(ci_e)
-                ON UPDATE CASCADE
-                ON DELETE CASCADE,
-            FOREIGN KEY(nombre_act,fecha) REFERENCES mtn.Actividad(nombre_act,fecha)
-                ON UPDATE CASCADE
-                ON DELETE CASCADE
-        );
-     CREATE TABLE mtn.Tipo_financista(
-            ci_e        mtn.diez_caracteres     NOT NULL,
-            nombre_act  mtn.treinta_caracteres  NOT NULL,
-            financista  mtn.treinta_caracteres  NOT NULL,
-            fecha       mtn.fecha               NOT NULL,
-            PRIMARY KEY(ci_e,nombre_act,financista,fecha),
-            FOREIGN KEY (ci_e) REFERENCES mtn.Es_un_Estudiante (ci_e)
-                ON UPDATE CASCADE
-                ON DELETE CASCADE,
-            FOREIGN KEY (nombre_act,fecha) REFERENCES mtn.Actividad (nombre_act,fecha)
-                ON UPDATE CASCADE
-                ON DELETE CASCADE
-        );
-     CREATE TABLE mtn.Tipo_incidente(
-            ci_e        mtn.diez_caracteres     NOT NULL,
-            nombre_act  mtn.treinta_caracteres  NOT NULL,
-            incidente   mtn.sesenta_caracteres  NOT NULL,
-            fecha       mtn.fecha               NOT NULL,
-            PRIMARY KEY(ci_e,nombre_act,incidente,fecha),
-            FOREIGN KEY (ci_e) REFERENCES mtn.Es_un_Estudiante(ci_e)
-                ON UPDATE CASCADE
-                ON DELETE CASCADE,
-            FOREIGN KEY(nombre_act,fecha) REFERENCES mtn.Actividad(nombre_act,fecha)
-                ON UPDATE CASCADE
-                ON DELETE CASCADE
-       );
+    );
+
+    CREATE TABLE MTN.TIPO_HOSPEDAJE(
+        HOSPEDAJE      MTN.TREINTA_CARACTERES   NOT NULL,
+        CI_ESTUDIANTE  MTN.DIEZ_CARACTERES      NOT NULL,
+        ID_ACTIVIDAD   MTN.DIEZ_CARACTERES      NOT NULL,
+        PRIMARY KEY (HOSPEDAJE, CI_ESTUDIANTE, ID_ACTIVIDAD),
+        FOREIGN KEY (CI_ESTUDIANTE)     REFERENCES  MTN.ESTUDIANTE  (CI_ESTUDIANTE)
+            ON UPDATE CASCADE
+            ON DELETE CASCADE,
+        FOREIGN KEY (ID_ACTIVIDAD)      REFERENCES  MTN.ACTIVIDAD   (ID_ACTIVIDAD)
+            ON UPDATE CASCADE
+            ON DELETE CASCADE
+    );
+
+    CREATE TABLE MTN.TIPO_FINANCISTA(
+        FINANCISTA      MTN.TREINTA_CARACTERES  NOT NULL,
+        CI_ESTUDIANTE   MTN.DIEZ_CARACTERES     NOT NULL,
+        ID_ACTIVIDAD    MTN.DIEZ_CARACTERES     NOT NULL,
+        PRIMARY KEY (FINANCISTA, CI_ESTUDIANTE, ID_ACTIVIDAD),
+        FOREIGN KEY (CI_ESTUDIANTE)     REFERENCES  MTN.ESTUDIANTE  (CI_ESTUDIANTE)
+            ON UPDATE CASCADE
+            ON DELETE CASCADE,
+        FOREIGN KEY (ID_ACTIVIDAD)      REFERENCES  MTN.ACTIVIDAD   (ID_ACTIVIDAD)
+            ON UPDATE CASCADE
+            ON DELETE CASCADE
+    );
+     
+    CREATE TABLE MTN.TIPO_INCIDENTE(
+        INCIDENTE       MTN.SESENTA_CARACTERES  NOT NULL,
+        CI_ESTUDIANTE   MTN.DIEZ_CARACTERES     NOT NULL,
+        ID_ACTIVIDAD    mtn.DIEZ_CARACTERES     NOT NULL,
+        PRIMARY KEY (INCIDENTE, CI_ESTUDIANTE, ID_ACTIVIDAD),
+        FOREIGN KEY (CI_ESTUDIANTE)     REFERENCES  MTN.ESTUDIANTE  (CI_ESTUDIANTE)
+            ON UPDATE CASCADE
+            ON DELETE CASCADE,
+        FOREIGN KEY (ID_ACTIVIDAD)      REFERENCES  MTN.ACTIVIDAD   (ID_ACTIVIDAD)
+            ON UPDATE CASCADE
+            ON DELETE CASCADE
+    );
    
