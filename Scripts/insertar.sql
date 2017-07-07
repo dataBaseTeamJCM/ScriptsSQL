@@ -51,3 +51,25 @@ VALUES('243275454','Tchaikovsky','Perez', '04163786632','perex@gmail.com','Urb L
 	  ('87456214','Maestro' ,'Miyagi','3463782661','miyagui@yahoo.com','Kiwi York',3,'Ing. games'),
 	  ('85858745','Gordom' ,'Ramsay','0211382661','ramsay@yahoo.com','Urb Los Nisperos',3,'Ing. sistemas'),
 	  ('25412568','Avril', 'Lavigne','012782661','lavigne@yahoo.com','Urb Los Mangos',3,'Ing. computacion');				
+
+INSERT INTO MTN.ACTIVIDAD
+VALUES	('TRDEC2017','taller de c','el lado oscuro','08-04-2017'),
+		('TRDC+2017','taller de c++','central apple','06-05-2017'),
+		('TRCOO2017','taller cool','china','05-06-2017'),
+		('TRDSJN2017','taller saijan','japon','09-09-2017'),
+		('TRDPTH2017','taller python','ragnarok','02-07-2017');
+
+INSERT INTO MTN.VIAJA
+VALUES 	('243275454','TRDEC2017',5),
+		('568921454','TRDEC2017',5),
+		('879554574','TRDEC2017',5),
+		('21484405','TRDEC2017',5),
+		('25412568','TRDEC2017',5),
+		('21484395','TRDEC2017',5),
+		('21484383','TRDEC2017',5),
+		('25475454','TRDEC2017',5),
+		('235478965','TRDEC2017',5),
+		('21484403','TRDEC2017',5),
+		('227895465','TRDEC2017',5),
+		('21484391','TRDEC2017',5),
+		('33325488','TRDEC2017',5);
