@@ -202,4 +202,18 @@ VALUES 	('LSUCFA2017','143275454'),
 		('LSUNFA2017','643275454'),
 		('LFULFA2017','143375454'),
 		('LFULFA2017','543275454');	
-		
+
+INSERT INTO MTN.COMPETENCIA
+VALUES	('MTNLGVE017','El Maraton Legendario','Nacional','Venezuela','04-09-2017');
+
+INSERT INTO MTN.PARTICIPA
+VALUES	('LSUCFA2017','MTNLGVE017','libros de programacion','www.site1.com','Bajo'),
+		('EEUCIG2017','MTNLGVE017','laptops','www.site2.com','Medio'),
+		('LRUCFA2017','MTNLGVE017','celulares','www.site3.com','Alto'),		
+		('ECUDFA2017','MTNLGVE017','tablets','www.site4.com','Medio'),
+		('EOUDFA2017','MTNLGVE017','dolares','www.site5.com','Bajo'),	
+		('LVUNFA2017','MTNLGVE017','becas','www.site6.com','Medio'),
+		('LEUSFA2017','MTNLGVE017','beca trabajo','www.site7.com','Alto'),	
+		('TOUAFA2017','MTNLGVE017','euros','www.site8.com','Medio'),
+		('LSUNFA2017','MTNLGVE017','bolivares','www.site9.com','Bajo'),
+		('LFULFA2017','MTNLGVE017','videojuegos','www.site10.com','Medio');		
