@@ -24,10 +24,10 @@
         CHECK(VALUE IN('Local', 'Regional','Nacional', 'Mundial' ));
     CREATE DOMAIN MTN.REND_EQ               VARCHAR(5)
         CHECK(VALUE IN('Bajo', 'Medio', 'Alto'));    
-    CREATE DOMAIN MTN.DIFICULTAD_P          VARCHAR(7)
-        CHECK(VALUE IN('Facil', 'Medio', 'Dificil'));
+    CREATE DOMAIN MTN.DIFICULTAD_P          VARCHAR(8)
+        CHECK(VALUE IN('Facil', 'Moderado', 'Dificil'));
     CREATE DOMAIN MTN.LENGUAJE_P            VARCHAR(6)
-        CHECK(VALUE IN('C/C++', 'Java', 'Python', 'Pascal'));
+        CHECK(VALUE IN('C','C++', 'Java', 'Python', 'Pascal'));
     CREATE DOMAIN MTN.AÑO_EQ                INT           /*AÑO DE CONSTITUCION DEL EQUIPO*/
         CHECK (VALUE >= 1900);        
     
