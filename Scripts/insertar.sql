@@ -232,3 +232,16 @@ VALUES 	('PRBCMDIF01','Calculadora Magica','Dificil','En una mesa estaban sentad
 		('PRBCLFAC10','Compañia De Lamparas','Facil','Una compañía fabrica y venden dos modelos de lámpara L1 y L2. Para su fabricación se necesita un trabajo manual de 20 minutos para el modelo L1 y de 30 minutos para el L2; y un trabajo de máquina para L1 y de 10 minutos para L2. Se dispone para el trabajo manual de 100 horas al mes y para la máquina 80 horas al mes. Sabiendo que el beneficio por unidad es de 15 y 10 euros para L1 y L2, respectivamente, planificar la producción para obtener el máximo beneficio.'),
 		('PRBGPMOD00','La Granja De Pollos','Moderado','En una granja de pollos se da una dieta, para engordar, con una composición mínima de 15 unidades de una sustancia A y otras 15 de una sustancia B. En el mercado sólo se encuentra dos clases de compuestos: el tipo X con una composición de una unidad de A y 5 de B, y el otro tipo, Y, con una composición de cinco unidades de A y una de B. El precio del tipo X es de 10 euros y del tipo Y es de 30 €. ¿Qué cantidades se han de comprar de cada tipo para cubrir las necesidades con un coste mínimo?'),
 		('PRBEADIF11','El Almacen','Dificil','Unos grandes almacenes desean liquidar 200 camisas y 100 pantalones de la temporada anterior. Para ello lanzan, dos ofertas, A y B. La oferta A consiste en un lote de una camisa y un pantalón, que se venden a 30 €; la oferta B consiste en un lote de tres camisas y un pantalón, que se vende a 50 €. No se desea ofrecer menos de 20 lotes de la oferta A ni menos de 10 de la B. ¿Cuántos lotes ha de vender de cada tipo para maximizar la ganancia?');
+
+INSERT INTO MTN.PROPONE
+VALUES	('MTNLGVE017','PRBGPMOD00'),
+		('MTNLGVE017','PRBCMDIF01'),
+		('MTNLGVE017','PRBMBDIF02'),
+		('MTNLGVE017','PRBRCFAC03'),
+		('MTNLGVE017','PRBLPMOD04'),
+		('MTNLGVE017','PRBMPDIF05'),
+		('MTNLGVE017','PRBAAFAC06'),
+		('MTNLGVE017','PRBPFMOD07'),
+		('MTNLGVE017','PRBESDIF08'),
+		('MTNLGVE017','PRBWEMOD09'),
+		('MTNLGVE017','PRBCLFAC10');
