@@ -59,20 +59,60 @@ VALUES	('TRDEC2017','taller de c','el lado oscuro','08-04-2017'),
 		('TRDSJN2017','taller saijan','japon','09-09-2017'),
 		('TRDPTH2017','taller python','ragnarok','02-07-2017');
 
+
+INSERT INTO MTN.UNIVERSIDAD_EQUIPO
+VALUES	('FACYT-EC-UC','Universidad de Carabobo'),
+		('FAC-EC-UCV','Universidad Central de Venezuela'),
+		('FACING-EIS-ULA','Universidad de los Andes'),
+		('FAC-EC-UDO','Universidad de Oriente'),
+		('FAC-EC-LUZ','Universidad del Zulia'),
+		('FAC-EC-USB','Universidad Simon Bolivar'),
+		('FAC-EC-UNA','Universidad Nacional Abierta'),
+		('FAC-EC-UNEFA','UNEFA'),
+		('FAC-EC-UNES','UNES'),
+		('FAC-EC-UPEL','UPEL');
+
+INSERT INTO MTN.EQUIPO 
+VALUES 	('LSUCFA2017','Los Sayayines',2017,'FACYT-EC-UC'),
+		('EEUCIG2017','El escuadron Suicida',2017,'FAC-EC-UCV'),
+		('LRUCFA2017','Los Rompe Codigos',2017,'FACING-EIS-ULA'),
+		('ECUDFA2017','El Cartel de la noche',2017,'FAC-EC-UDO'),
+		('EOUDFA2017','El lado Oscuro',2017,'FAC-EC-LUZ'),
+		('LVUNFA2017','La legion Vetelca',2017,'FAC-EC-USB'),
+		('LEUSFA2017','La Faccion EseCuele',2017,'FAC-EC-UNA'),
+		('TOUAFA2017','The CodeOne',2017,'FAC-EC-UNEFA'),
+		('LSUNFA2017','Los Sie7e',2017,'FAC-EC-UNES'),
+		('LFULFA2017','los freelanceros',2017,'FAC-EC-UPEL'),
+		('LPLZFA2017','LOS perdedores',2017,'FACYT-EC-UC'),
+		('EMUVFA2017','el quipo marvel',2017,'FAC-EC-UCV'),
+		('EDUFFA2017','el equipo dc',2017,'FACING-EIS-ULA'),
+		('LJUPFA2017','liga de la justicia',2017,'FAC-EC-UDO'),
+		('TIUNFA2017','the injustice',2017,'FAC-EC-LUZ'),
+		('LAUNFA2017','los adopRaki',2017,'FAC-EC-USB'),
+		('LCULFA2017','los cuervos',2017,'FAC-EC-UNA'),
+		('LGUTFA2017','los greenjoys',2017,'FAC-EC-UNEFA'),
+		('TCUAFA2017','the cav´s',2017,'FAC-EC-UPEL');
+
 INSERT INTO MTN.VIAJA
-VALUES 	('243275454','TRDEC2017',5),
-		('568921454','TRDEC2017',5),
-		('879554574','TRDEC2017',5),
-		('21484405','TRDEC2017',5),
-		('25412568','TRDEC2017',5),
-		('21484395','TRDEC2017',5),
-		('21484383','TRDEC2017',5),
-		('25475454','TRDEC2017',5),
-		('235478965','TRDEC2017',5),
-		('21484403','TRDEC2017',5),
-		('227895465','TRDEC2017',5),
-		('21484391','TRDEC2017',5),
-		('33325488','TRDEC2017',5);
+VALUES 	('LSUCFA2017','TRDEC2017',5, 'Pepsicola','dubai hotel'),
+		('EEUCIG2017','TRDEC2017',5, 'pdvsa','la estancia resort'),
+		('LRUCFA2017','TRDEC2017',5, 'lenovo','dubai hotel'),
+		('ECUDFA2017','TRDEC2017',5, 'siragon','euro building'),
+		('EOUDFA2017','TRDEC2017',5, 'Sony','Hotel la clazeta'),
+		('LVUNFA2017','TRDEC2017',5, 'Hp','Sabana Alta'),
+		('LEUSFA2017','TRDEC2017',5, 'PlayStation','Sabana del medio'),
+		('TOUAFA2017','TRDEC2017',5, 'Drink','Marriot Hotel'),
+		('LSUNFA2017','TRDEC2017',5, 'Rockstar','Isla Del Sol'),
+		('LFULFA2017','TRDEC2017',5, 'Huawei','Mario Resort'),
+		('LPLZFA2017','TRDEC2017',5, 'Fifa','Sabana Grande'),
+		('EMUVFA2017','TRDEC2017',5, 'Toshiba','Las tInajas'),
+		('EDUFFA2017','TRDEC2017',5, 'Apple','Hotel Del centro'),
+		('LJUPFA2017','TRDEC2017',5, 'Taurus','Las Vegas Motel'),
+		('TIUNFA2017','TRDEC2017',5, 'GitHub','Five Star Motel'),
+		('LAUNFA2017','TRDEC2017',5, 'BitBucked','esCuele Motel'),
+		('LCULFA2017','TRDEC2017',5, 'Nokia','Colombia Hotel'),
+		('LGUTFA2017','TRDEC2017',5, 'Swiss Army','Little Hotel'),
+		('TCUAFA2017','TRDEC2017',5, 'Addidas','Sambil Hotel');
 
 INSERT INTO MTN.PROFESOR
 VALUES	('143275454','Xena','Xenoso', '34163786632','xenex@gmail.com','Colombia Villa Topo','Tecnico', null,'Analista de Datos'),
@@ -97,57 +137,16 @@ VALUES	('143275454','Xena','Xenoso', '34163786632','xenex@gmail.com','Colombia V
 		('543275454','Quinzal','Quinto', '34263786632','quinto@gmail.com','el penla','Coach','ministro' ,'Big Data');
 
 INSERT INTO MTN.PREPARA_A
-VALUES	('143275454','25412568'),
-		('143275454','85858745'),
-		('143275454','343275459'),
-		('145475454','21484404'),
-		('145475454','21484384'),
-		('145475454','21484403'),
-		('143276454','33325488'),
-		('143276454','21484383'),
-		('143276454','568921454'),
-		('143175454','21484405'),
-		('143175454','21484395'),
-		('143175454','227895465'),
-		('133275454','21484391'),
-		('133275454','235478965'),
-		('133275454','25475454'),
-		('343275454','879554574'),
-		('343275454','21484412'),
-		('343275454','21484380'),
-		('163275454','21484381'),
-		('163275454','21484396'),
-		('163275454','243587454'),
-		('153275454','21484409'),
-		('153275454','563225454'),
-		('153275454','87456214'),
-		('144275454','21484399'),
-		('144275454','21484400'),
-		('144275454','21484406'),
-		('143375454','21484408'),
-		('143375454','243333454'),
-		('143375454','21484387');
-
-INSERT INTO MTN.EQUIPO 
-VALUES 	('LSUCFA2017','Los Sayayines',2017,'UC','Facyt'),
-		('EEUCIG2017','El escuadron Suicida',2017,'UC','Ing'),
-		('LRUCFA2017','Los Rompe Codigos',2017,'UC','Faces'),
-		('ECUDFA2017','El Cartel de la noche',2017,'UDO','FacT'),
-		('EOUDFA2017','El lado Oscuro',2017,'UDO','FacT'),
-		('LVUNFA2017','La legion Vetelca',2017,'UNEXPO','Fac'),
-		('LEUSFA2017','La Faccion EseCuele',2017,'USB','FAC'),
-		('TOUAFA2017','The CodeOne',2017,'UCLA','FAC'),
-		('LSUNFA2017','Los Sie7e',2017,'UNA','FAC'),
-		('LFULFA2017','los freelanceros',2017,'ULA','FAC'),
-		('LPLZFA2017','LOS perdedores',2017,'LUZ','FAC'),
-		('EMUVFA2017','el quipo marvel',2017,'UCV','FAC'),
-		('EDUFFA2017','el equipo dc',2017,'UNEFA','FAC'),
-		('LJUPFA2017','liga de la justicia',2017,'UPEL','FAC'),
-		('TIUNFA2017','the injustice',2017,'UNES','FAC'),
-		('LAUNFA2017','los adopRaki',2017,'UNEFA','FAC'),
-		('LCULFA2017','los cuervos',2017,'UNELLEZ','FAC'),
-		('LGUTFA2017','los greenjoys',2017,'UNET','FAC'),
-		('TCUAFA2017','the cav´s',2017,'UAM','FAC');
+VALUES	('143275454','LSUCFA2017'),
+		('145475454','EEUCIG2017'),
+		('143276454','LRUCFA2017'),
+		('143175454','ECUDFA2017'),
+		('133275454','EOUDFA2017'),
+		('163275454','LVUNFA2017'),
+		('343275454','LEUSFA2017'),
+		('153275454','TOUAFA2017'),
+		('144275454','LSUNFA2017'),
+		('143375454','LFULFA2017');
 
 INSERT INTO MTN.CONSTITUYE_ESTUDIANTE
 VALUES	('LSUCFA2017','25412568'),
@@ -181,27 +180,17 @@ VALUES	('LSUCFA2017','25412568'),
 		('LFULFA2017','243333454'),
 		('LFULFA2017','21484387');
 
-INSERT INTO MTN.CONSTITUYE_PROFESOR
-VALUES 	('LSUCFA2017','143275454'),
-		('LSUCFA2017','143285454'),
-		('EEUCIG2017','145475454'),
-		('EEUCIG2017','143277454'),
-		('LRUCFA2017','143276454'),		
-		('LRUCFA2017','143275554'),
-		('ECUDFA2017','143175454'),
-		('ECUDFA2017','143275464'),
-		('EOUDFA2017','133275454'),
-		('EOUDFA2017','143275455'),
-		('LVUNFA2017','343275454'),
-		('LVUNFA2017','943275454'),
-		('LEUSFA2017','163275454'),
-		('LEUSFA2017','843275454'),
-		('TOUAFA2017','153275454'),
-		('TOUAFA2017','743275454'),
-		('LSUNFA2017','144275454'),
-		('LSUNFA2017','643275454'),
-		('LFULFA2017','143375454'),
-		('LFULFA2017','543275454');	
+INSERT INTO MTN.PROFESOR_REPRESENTA
+VALUES 	('143285454','LSUCFA2017'),
+		('143277454','EEUCIG2017'),
+		('143275554','LRUCFA2017'),
+		('143275464','ECUDFA2017'),
+		('143275455','EOUDFA2017'),
+		('943275454','LVUNFA2017'),
+		('843275454','LEUSFA2017'),
+		('743275454','TOUAFA2017'),
+		('643275454','LSUNFA2017'),
+		('543275454','LFULFA2017');
 
 INSERT INTO MTN.COMPETENCIA
 VALUES	('MTNLGVE017','El Maraton Legendario','Nacional','Venezuela','04-09-2017');
@@ -255,4 +244,27 @@ VALUES	('LSUCFA2017','PRBGPMOD00','C','00:50:34'),
 		('EEUCIG2017','PRBESDIF08','C++','01:21:21'),	
 		('EEUCIG2017','PRBCLFAC10','Java','03:21:34'),	
 		('TOUAFA2017','PRBCMDIF01','Pascal','02:21:32'),	
-		('LVUNFA2017','PRBMBDIF02','Python','00:10:36');				
+		('LVUNFA2017','PRBMBDIF02','Python','00:10:36');
+
+INSERT INTO MTN.TIPO_INCIDENTE
+VALUES	('Se daÑo el bus del traslado','ECUDFA2017','TRDEC2017'),
+		('Un robo en la via','LFULFA2017','TRDEC2017');
+
+INSERT INTO MTN.CLASES
+VALUES	('clase de programacion 1','LSUCFA2017','143275454'),
+		('clase de rapidez mental','LSUCFA2017','143275454'),
+		('clase de rapidez mental 2','LSUCFA2017','143275454'),
+		('clase de agilidad criptografica','EEUCIG2017','145475454'),						
+		('clase de desencriptar codigos','LRUCFA2017','143276454'),
+		('clase de hackeo veloz','ECUDFA2017','143175454'),
+		('clase de puertos com','EOUDFA2017','133275454'),
+		('clase de word','LVUNFA2017','163275454'),
+		('clase de python plus','LEUSFA2017','343275454'),
+		('clase de hp','TOUAFA2017','153275454'),
+		('clase de manejo de datos','LSUNFA2017','144275454'),
+		('clase de lista, pila y cola','LFULFA2017','143375454'),
+		('clase de buffers','LFULFA2017','143375454'),
+		('clase de nodos','LFULFA2017','143375454'),
+		('clase de desarrollo inteligente','LFULFA2017','143375454'),
+		('clase de ui','LFULFA2017','143375454'),
+		('clase de xp','LFULFA2017','143375454');
