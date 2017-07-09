@@ -52,14 +52,6 @@ VALUES('243275454','Tchaikovsky','Perez', '04163786632','perex@gmail.com','Urb L
 	  ('85858745','Gordom' ,'Ramsay','0211382661','ramsay@yahoo.com','Urb Los Nisperos',3,'Ing. sistemas'),
 	  ('25412568','Avril', 'Lavigne','012782661','lavigne@yahoo.com','Urb Los Mangos',3,'Ing. computacion');				
 
-INSERT INTO MTN.ACTIVIDAD
-VALUES	('TRDEC2017','taller de c','el lado oscuro','08-04-2017'),
-		('TRDC+2017','taller de c++','central apple','06-05-2017'),
-		('TRCOO2017','taller cool','china','05-06-2017'),
-		('TRDSJN2017','taller saijan','japon','09-09-2017'),
-		('TRDPTH2017','taller python','ragnarok','02-07-2017');
-
-
 INSERT INTO MTN.UNIVERSIDAD_EQUIPO
 VALUES	('FACYT-EC-UC','Universidad de Carabobo'),
 		('FAC-EC-UCV','Universidad Central de Venezuela'),
@@ -92,27 +84,6 @@ VALUES 	('LSUCFA2017','Los Sayayines',2017,'FACYT-EC-UC'),
 		('LCULFA2017','los cuervos',2017,'FAC-EC-UNA'),
 		('LGUTFA2017','los greenjoys',2017,'FAC-EC-UNEFA'),
 		('TCUAFA2017','the cav´s',2017,'FAC-EC-UPEL');
-
-INSERT INTO MTN.VIAJA
-VALUES 	('LSUCFA2017','TRDEC2017',5, 'Pepsicola','dubai hotel'),
-		('EEUCIG2017','TRDEC2017',5, 'pdvsa','la estancia resort'),
-		('LRUCFA2017','TRDEC2017',5, 'lenovo','dubai hotel'),
-		('ECUDFA2017','TRDEC2017',5, 'siragon','euro building'),
-		('EOUDFA2017','TRDEC2017',5, 'Sony','Hotel la clazeta'),
-		('LVUNFA2017','TRDEC2017',5, 'Hp','Sabana Alta'),
-		('LEUSFA2017','TRDEC2017',5, 'PlayStation','Sabana del medio'),
-		('TOUAFA2017','TRDEC2017',5, 'Drink','Marriot Hotel'),
-		('LSUNFA2017','TRDEC2017',5, 'Rockstar','Isla Del Sol'),
-		('LFULFA2017','TRDEC2017',5, 'Huawei','Mario Resort'),
-		('LPLZFA2017','TRDEC2017',5, 'Fifa','Sabana Grande'),
-		('EMUVFA2017','TRDEC2017',5, 'Toshiba','Las tInajas'),
-		('EDUFFA2017','TRDEC2017',5, 'Apple','Hotel Del centro'),
-		('LJUPFA2017','TRDEC2017',5, 'Taurus','Las Vegas Motel'),
-		('TIUNFA2017','TRDEC2017',5, 'GitHub','Five Star Motel'),
-		('LAUNFA2017','TRDEC2017',5, 'BitBucked','esCuele Motel'),
-		('LCULFA2017','TRDEC2017',5, 'Nokia','Colombia Hotel'),
-		('LGUTFA2017','TRDEC2017',5, 'Swiss Army','Little Hotel'),
-		('TCUAFA2017','TRDEC2017',5, 'Addidas','Sambil Hotel');
 
 INSERT INTO MTN.PROFESOR
 VALUES	('143275454','Xena','Xenoso', '34163786632','xenex@gmail.com','Colombia Villa Topo','Tecnico', null,'Analista de Datos'),
@@ -194,6 +165,34 @@ VALUES 	('143285454','LSUCFA2017'),
 
 INSERT INTO MTN.COMPETENCIA
 VALUES	('MTNLGVE017','El Maraton Legendario','Nacional','Venezuela','04-09-2017');
+
+INSERT INTO MTN.ACTIVIDAD
+VALUES	('TRDEC2017','MTNLGVE017','taller de c','el lado oscuro','08-04-2017'),
+		('TRDC+2017','MTNLGVE017','taller de c++','central apple','06-05-2017'),
+		('TRCOO2017','MTNLGVE017','taller cool','china','05-06-2017'),
+		('TRDSJN2017','MTNLGVE017','taller saijan','japon','09-09-2017'),
+		('TRDPTH2017','MTNLGVE017','taller python','ragnarok','02-07-2017');
+
+INSERT INTO MTN.VIAJA
+VALUES 	('LSUCFA2017','TRDEC2017',5, 'Pepsicola','dubai hotel'),
+		('EEUCIG2017','TRDEC2017',5, 'pdvsa','la estancia resort'),
+		('LRUCFA2017','TRDEC2017',5, 'lenovo','dubai hotel'),
+		('ECUDFA2017','TRDEC2017',5, 'siragon','euro building'),
+		('EOUDFA2017','TRDEC2017',5, 'Sony','Hotel la clazeta'),
+		('LVUNFA2017','TRDEC2017',5, 'Hp','Sabana Alta'),
+		('LEUSFA2017','TRDEC2017',5, 'PlayStation','Sabana del medio'),
+		('TOUAFA2017','TRDEC2017',5, 'Drink','Marriot Hotel'),
+		('LSUNFA2017','TRDEC2017',5, 'Rockstar','Isla Del Sol'),
+		('LFULFA2017','TRDEC2017',5, 'Huawei','Mario Resort'),
+		('LPLZFA2017','TRDEC2017',5, 'Fifa','Sabana Grande'),
+		('EMUVFA2017','TRDEC2017',5, 'Toshiba','Las tInajas'),
+		('EDUFFA2017','TRDEC2017',5, 'Apple','Hotel Del centro'),
+		('LJUPFA2017','TRDEC2017',5, 'Taurus','Las Vegas Motel'),
+		('TIUNFA2017','TRDEC2017',5, 'GitHub','Five Star Motel'),
+		('LAUNFA2017','TRDEC2017',5, 'BitBucked','esCuele Motel'),
+		('LCULFA2017','TRDEC2017',5, 'Nokia','Colombia Hotel'),
+		('LGUTFA2017','TRDEC2017',5, 'Swiss Army','Little Hotel'),
+		('TCUAFA2017','TRDEC2017',5, 'Addidas','Sambil Hotel');
 
 INSERT INTO MTN.PARTICIPA
 VALUES	('LSUCFA2017','MTNLGVE017','libros de programacion','www.site1.com','Bajo'),
