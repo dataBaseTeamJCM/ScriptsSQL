@@ -9,23 +9,25 @@ REVOKE  USAGE
     FROM  role1;
 
 REVOKE   UPDATE,SELECT
-    ON   TABLE mtn.integrante,
-              mtn.viaja,
-              mtn.tipo_hospedaje,
-              mtn.tipo_financista,
-              mtn.tipo_incidente
+    ON   TABLE MTN.ESTUDIANTE,
+              MTN.VIAJA,
+              MTN.TIPO_INCIDENTE
     FROM  role1;
 
 REVOKE  SELECT
-    ON  TABLE mtn.es_un_profesor,           /* revoca privivilegios sobre las tablas*/
-              mtn.es_un_estudiante,
-              mtn.resuelve,
-              mtn.competencia,
-              mtn.propone,
-              mtn.problema,
-              mtn.constituye,
-              mtn.participa,
-              mtn.equipo   
+    ON  TABLE MTN.PROFESOR,           /* privivilegios sobre las tablas*/
+              MTN.RESUELVE,
+              MTN.COMPETENCIA,
+              MTN.PROPONE,
+              MTN.PROBLEMA,
+              MTN.CONSTITUYE_ESTUDIANTE,
+              MTN.PROFESOR_REPRESENTA,
+              MTN.PREPARA_A,
+              MTN.ACTIVIDAD,
+              MTN.PARTICIPA,
+              MTN.UNIVERSIDAD_EQUIPO,
+              MTN.EQUIPO,
+              MTN.CLASES  
     FROM  role1;
 /*********roles de coordinador************************/
 REVOKE    ALL PRIVILEGES 
